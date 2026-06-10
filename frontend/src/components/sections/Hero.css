@@ -104,6 +104,19 @@
   }
 
   .hero__image {
-    max-width: 320px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 1.5rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .hero__image {
+    max-width: 200px;
+    width: 58%;
   }
 }
