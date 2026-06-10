@@ -1,13 +1,13 @@
 export interface ServiceCategoryCard {
   id: string
   title: string
-  /** רשימת שירותים לדוגמה — מוצגת בפונט קטן מתחת לכותרת */
+  /** רשימת שירותים לדוגמה - מוצגת בפונט קטן מתחת לכותרת */
   examples: string
   icon: string
 }
 
 export const servicesIntro =
-  'כל מה שצריך לתחזוקה שוטפת של הבית או העסק — תחת קורת גג אחת.'
+  'כל מה שצריך לתחזוקה שוטפת של הבית או העסק - תחת קורת גג אחת.'
 
 export const servicesHint =
   'לחצו על קטגוריה לשליחת הודעת WhatsApp מוכנה עם בקשה להצעת מחיר'
@@ -34,7 +34,7 @@ export const serviceCategories: ServiceCategoryCard[] = [
   {
     id: 'hanging',
     title: 'תליית מדפים ותמונות',
-    examples: 'מדפים, תמונות, מראות וטלוויזיות — במיקום ובגובה מדויק, על כל סוג קיר',
+    examples: 'מדפים, תמונות, מראות וטלוויזיות - במיקום ובגובה מדויק, על כל סוג קיר',
     icon: '📐',
   },
   {
@@ -64,7 +64,7 @@ export const serviceCategories: ServiceCategoryCard[] = [
   {
     id: 'business',
     title: 'תחזוקה לעסקים',
-    examples: 'מענה לעסקים קטנים ומשרדים — תלייה, התקנות ותיקונים שוטפים',
+    examples: 'מענה לעסקים קטנים ומשרדים - תלייה, התקנות ותיקונים שוטפים',
     icon: '🏢',
   },
 ]

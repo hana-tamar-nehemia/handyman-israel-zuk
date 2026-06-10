@@ -68,7 +68,7 @@ export function Reviews() {
                 </div>
                 <p className="reviews__text">&ldquo;{review.text}&rdquo;</p>
                 <footer className="reviews__author">
-                  — {review.author}, {review.location}
+                  - {review.author}, {review.location}
                 </footer>
                 {review.categories[0] && (
                   <span className="reviews__tag">{review.categories[0]}</span>

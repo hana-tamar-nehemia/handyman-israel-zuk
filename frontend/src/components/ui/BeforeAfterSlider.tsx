@@ -18,7 +18,7 @@ export function BeforeAfterSlider({
 }: BeforeAfterSliderProps) {
   /** נעול על "לפני" אחרי לחיצה (נייד + מחשב) */
   const [pinned, setPinned] = useState(false)
-  /** מציג "לפני" בזמן hover — רק מחשב */
+  /** מציג "לפני" בזמן hover - רק מחשב */
   const [hovering, setHovering] = useState(false)
 
   const showBefore = pinned || hovering
@@ -48,13 +48,13 @@ export function BeforeAfterSlider({
     >
       <img
         src={afterImage}
-        alt={`${alt} — ${afterLabel}`}
+        alt={`${alt} - ${afterLabel}`}
         className="before-after__img before-after__img--after"
         draggable={false}
       />
       <img
         src={beforeImage}
-        alt={`${alt} — ${beforeLabel}`}
+        alt={`${alt} - ${beforeLabel}`}
         className="before-after__img before-after__img--before"
         draggable={false}
       />

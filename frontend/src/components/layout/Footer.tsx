@@ -24,7 +24,7 @@ export function Footer() {
 
       <div className="footer__bottom">
         <div className="container">
-          <p>© {year}. כל הזכויות שמורות — tamar nehemia</p>
+          <p>© {year}. כל הזכויות שמורות - tamar nehemia</p>
         </div>
       </div>
     </footer>

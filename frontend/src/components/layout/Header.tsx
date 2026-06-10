@@ -26,7 +26,7 @@ export function Header() {
       <div className="container header__inner">
         <a href="#home" className="header__logo" onClick={closeMenu}>
           <span className="header__logo-icon" aria-hidden="true">🔧</span>
-          <span className="header__logo-text">{siteConfig.businessName}</span>
+          <span className="header__logo-text">{siteConfig.headerBrand}</span>
         </a>
 
         <nav className="header__nav" aria-label="ניווט ראשי">

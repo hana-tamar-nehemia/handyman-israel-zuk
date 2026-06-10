@@ -5,7 +5,7 @@ export interface WorkItem {
   image: string
 }
 
-/** תמונות placeholder — יש להחליף ב-public/images/works/ */
+/** תמונות placeholder - יש להחליף ב-public/images/works/ */
 export const works: WorkItem[] = [
   {
     id: 'tv',
@@ -22,7 +22,7 @@ export const works: WorkItem[] = [
   {
     id: 'blinds',
     title: 'תיקון תריס',
-    description: 'תיקון תריסים חשמליים וידניים — חזרה לתפקוד מלא',
+    description: 'תיקון תריסים חשמליים וידניים - חזרה לתפקוד מלא',
     image: '/images/works/blinds-after.svg',
   },
   {

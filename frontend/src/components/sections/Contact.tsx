@@ -14,7 +14,7 @@ const contactItems = [
     href: whatsappUrl(contactMessage),
     external: true,
     highlight: true,
-    action: 'שלח הודעה — מענה מהיר',
+    action: 'שלח הודעה - מענה מהיר',
   },
   {
     id: 'phone',

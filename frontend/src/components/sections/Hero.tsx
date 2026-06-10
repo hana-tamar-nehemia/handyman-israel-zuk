@@ -36,7 +36,7 @@ export function Hero() {
         <div className="hero__image-wrap">
           <img
             src="/images/israel-hero.jpg"
-            alt={`${siteConfig.businessName} — הנדימן מקצועי`}
+            alt={`${siteConfig.businessName} - הנדימן מקצועי`}
             className="hero__image"
             width={480}
             height={560}
