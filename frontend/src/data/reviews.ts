@@ -392,8 +392,7 @@ export const reviews: Review[] = reviewDisplayOrder
   .filter((review): review is Review => review !== undefined)
 
 export const INITIAL_REVIEWS_COUNT = 8
-
-export const featuredReviews = reviews.slice(0, INITIAL_REVIEWS_COUNT)
+export const MOBILE_INITIAL_REVIEWS_COUNT = 4
 
 export function getReviewsByCategory(category: ReviewCategory): Review[] {
   return reviews.filter((review) => review.categories.includes(category))
