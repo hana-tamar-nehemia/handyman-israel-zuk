@@ -1,0 +1,25 @@
+.tips-faq__layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.tips-faq__heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+}
+
+.tips-faq__summary {
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .tips-faq__layout {
+    grid-template-columns: 1fr;
+  }
+}

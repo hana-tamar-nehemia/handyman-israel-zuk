@@ -1,0 +1,109 @@
+.before-after {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.before-after:focus-visible {
+  box-shadow: var(--shadow), 0 0 0 3px rgba(30, 58, 95, 0.4);
+}
+
+.before-after__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.before-after__img--after {
+  z-index: 1;
+  opacity: 1;
+}
+
+.before-after__img--before {
+  z-index: 2;
+  opacity: 0;
+}
+
+.before-after--before .before-after__img--before {
+  opacity: 1;
+}
+
+.before-after__badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  z-index: 3;
+  transition: background 0.3s ease, color 0.3s ease;
+  pointer-events: none;
+}
+
+.before-after__badge--after {
+  background: rgba(30, 58, 95, 0.85);
+  color: #fff;
+}
+
+.before-after__badge--before {
+  background: rgba(100, 116, 139, 0.9);
+  color: #fff;
+}
+
+.before-after__hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.65rem;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.75));
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* מחשב — מסך עם עכבר */
+@media (hover: hover) and (pointer: fine) {
+  .before-after__hint--hover {
+    opacity: 1;
+  }
+
+  .before-after__hint--touch {
+    display: none;
+  }
+
+  .before-after:hover .before-after__hint--hover {
+    opacity: 0;
+  }
+}
+
+/* נייד / מגע */
+@media (hover: none), (pointer: coarse) {
+  .before-after__hint--hover {
+    display: none;
+  }
+
+  .before-after__hint--touch {
+    opacity: 1;
+  }
+
+  .before-after--before .before-after__hint--touch {
+    opacity: 0.85;
+  }
+}

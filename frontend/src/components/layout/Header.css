@@ -1,0 +1,191 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.header--top {
+  background: rgba(255, 255, 255, 0.55);
+  border-bottom-color: transparent;
+}
+
+.header--scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04), 0 12px 40px rgba(15, 23, 42, 0.06);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  gap: 1.5rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--color-heading);
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  background: rgba(15, 23, 42, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.header__nav-link {
+  position: relative;
+  padding: 0.45rem 0.75rem;
+  border-radius: 9px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.header__nav-link:hover {
+  color: var(--color-heading);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.header__burger:hover {
+  background: rgba(15, 23, 42, 0.07);
+}
+
+.header__burger span {
+  display: block;
+  height: 2px;
+  background: var(--color-heading);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.header__burger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__burger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__burger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.header__mobile {
+  display: none;
+}
+
+.header__overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__mobile {
+    display: block;
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: min(300px, 88vw);
+    height: calc(100vh - var(--header-height));
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(15, 23, 42, 0.08);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 101;
+    overflow-y: auto;
+    box-shadow: -12px 0 40px rgba(15, 23, 42, 0.08);
+  }
+
+  .header__mobile--open {
+    transform: translateX(0);
+  }
+
+  .header__mobile-list {
+    padding: 0.75rem;
+  }
+
+  .header__mobile-link {
+    display: block;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    border-radius: 10px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .header__mobile-link:hover {
+    background: rgba(15, 23, 42, 0.05);
+    color: var(--color-heading);
+  }
+
+  .header__overlay {
+    display: block;
+    position: fixed;
+    inset: var(--header-height) 0 0 0;
+    background: rgba(15, 23, 42, 0.25);
+    backdrop-filter: blur(2px);
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+  }
+}

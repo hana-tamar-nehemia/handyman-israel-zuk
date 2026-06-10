@@ -1,0 +1,10 @@
+# דפלוי אוטומטי: כל push ל-main מפעיל build מחדש
+# https://app.netlify.com → Add new site → Import from Git
+
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
